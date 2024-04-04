@@ -35,7 +35,9 @@ def jogo_da_forca():
             print(f"Letra '{letra_adivinhada}' não está na palavra. Tentativas restantes: {max_tentativas - tentativas}")
         
         if "_" not in letras_ocultas:
+            print("-------------------------------------------------------------------")
             print(f"Parabéns, {jogadores[1]}! Você ganhou! A palavra era: {palavra_escolhida}")
+            print("-------------------------------------------------------------------")
             break
     
     # Se o usuário que adivinhou usou mais que o triplo de letras da palavra, o primeiro jogador ganha
