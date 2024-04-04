@@ -37,7 +37,7 @@ def jogo_da_forca():
             break
     
     # Se o usuário que adivinhou usou mais que o triplo de letras da palavra, o primeiro jogador ganha
-    if tentativas >= 3 * len(letras_palavra):
+    if tentativas >= 7: #3 * len(letras_palavra):
         print(f"{jogadores[1]} (jogador que adivinhou) ganha! A palavra era: {palavra_escolhida}")
     else:
         print(f"{jogadores[0]} (jogador que escolheu a palavra) ganha! A palavra era: {palavra_escolhida}")
