@@ -45,7 +45,7 @@ def jogo_da_forca():
     #   print(f"{jogadores[1]} (jogador que adivinhou) ganha! A palavra era: {palavra_escolhida}")
     else:
         print("-------------------------------------------------------------------")
-        print(f"{jogadores[0]} (jogador que escolheu a palavra) ganha! A palavra era: {palavra_escolhida}")
+        print(f"{jogadores[0]} ganha! A palavra era: {palavra_escolhida}")
         print("-------------------------------------------------------------------")
 
 # Inicia o jogo
