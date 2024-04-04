@@ -1,3 +1,5 @@
+#Jogo da forca em Python
+
 def obter_palavra_escolhida():
     return input("Digite uma palavra para o jogo da forca: ").lower()
 
