@@ -17,7 +17,7 @@ def jogo_da_forca():
     palavra_escolhida = obter_palavra_escolhida()
     letras_palavra = set(palavra_escolhida)
     letras_ocultas = ["_" for _ in palavra_escolhida]
-    max_tentativas = 6
+    max_tentativas = 20
     tentativas = 0
     
     while tentativas < max_tentativas:
@@ -37,7 +37,7 @@ def jogo_da_forca():
             break
     
     # Se o usuário que adivinhou usou mais que o triplo de letras da palavra, o primeiro jogador ganha
-    if tentativas >= 20:#len(letras_palavra):
+    if tentativas >= 21:#len(letras_palavra):
         print(f"{jogadores[1]} (jogador que adivinhou) ganha! A palavra era: {palavra_escolhida}")
     else:
         print(f"{jogadores[0]} (jogador que escolheu a palavra) ganha! A palavra era: {palavra_escolhida}")
