@@ -1,7 +1,7 @@
 estoque = {}
 
 while True:
-    print("\nMenu:")
+    print("\n---Menu---")
     print("1. Cadastrar produto")
     print("2. Retirar produto")
     print("3. Verificar estoque")
