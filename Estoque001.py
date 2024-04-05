@@ -1,30 +1,38 @@
-class Produto:
-    def __init__(self, nome, quantidade):
-        self.nome = nome
-        self.quantidade = quantidade
+estoque = {}
 
-class Estoque:
-    def __init__(self):
-        self.produtos = {}
+while True:
+    print("\nMenu:")
+    print("1. Cadastrar produto")
+    print("2. Retirar produto")
+    print("3. Verificar estoque")
+    print("4. Sair")
+    opcao = int(input("Escolha uma opção: "))
 
-    def cadastrar_produto(self, nome, quantidade):
-        if nome not in self.produtos:
-            self.produtos[nome] = Produto(nome, quantidade)
+    if opcao == 1:
+        produto = input("Nome do produto: ")
+        quantidade = int(input("Quantidade: "))
+        if produto in estoque:
+            estoque[produto] += quantidade
         else:
-            self.produtos[nome].quantidade += quantidade
+            estoque[produto] = quantidade
+        print(f"{quantidade} unidades de {produto} foram adicionadas ao estoque.")
 
-    def retirar_produto(self, nome, quantidade):
-        if nome in self.produtos and self.produtos[nome].quantidade >= quantidade:
-            self.produtos[nome].quantidade -= quantidade
+    elif opcao == 2:
+        produto = input("Nome do produto: ")
+        quantidade = int(input("Quantidade: "))
+        if produto in estoque and quantidade <= estoque[produto]:
+            estoque[produto] -= quantidade
+            print(f"{quantidade} unidades de {produto} foram retiradas do estoque.")
         else:
-            print("Produto não disponível em quantidade suficiente")
+            print("Produto não disponível em quantidade suficiente.")
 
-    def mostrar_estoque(self):
-        for produto in self.produtos.values():
-            print(f"Produto: {produto.nome}, Quantidade: {produto.quantidade}")
+    elif opcao == 3:
+        print("\nEstoque atual:")
+        for produto, quantidade in estoque.items():
+            print(f"{produto}: {quantidade}")
 
-estoque = Estoque()
-estoque.cadastrar_produto("Produto1", 10)
-estoque.cadastrar_produto("Produto2", 5)
-estoque.retirar_produto("Produto1", 3)
-estoque.mostrar_estoque()
+    elif opcao == 4:
+        break
+
+    else:
+        print("Opção inválida. Tente novamente.")
