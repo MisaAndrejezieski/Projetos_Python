@@ -29,7 +29,7 @@ while True:
         chances_restantes -= 1
         print(f"Letra não encontrada! Chances restantes: {chances_restantes}")
 
-    # Verificar se o usuadesderio ganhou ou perdeu
+    # Verificar se o usuario ganhou ou perdeu
     if palavra_mostrada == palavra_secreta:
         ganhou = True
         break
