@@ -1,9 +1,9 @@
 # Jogo da Forca em Python feito por A.I.
 
-# Escolha da palavra secreta pelo usuário
+# Escolha da palavra secreta pelo usuario
 palavra_secreta = input("Digite a palavra secreta: ").lower()
 
-# Inicialização das variáveis
+# Inicializacao das variáveis
 letras_adivinhadas = []
 chances_restantes = 25
 ganhou = False
