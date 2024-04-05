@@ -1,72 +1,97 @@
 import json
 import os
 
-def carregar_estoque():
-    if os.path.exists('estoque.json'):
-        with open('estoque.json', 'r') as f:
-            return json.load(f)
-    else:
-        return {}
+class Produto:
+    def __init__(self, nome, quantidade):
+        self.nome = nome
+        self.quantidade = quantidade
 
-def salvar_estoque(estoque):
-    with open('estoque.json', 'w') as f:
-        json.dump(estoque, f)
+class Estoque:
+    def __init__(self, arquivo='estoque.json'):
+        self.arquivo = arquivo
+        if os.path.exists(arquivo):
+            with open(arquivo, 'r') as f:
+                self.produtos = json.load(f)
+        else:
+            self.produtos = {}
 
-estoque = carregar_estoque()
+    def adicionar(self, produto, quantidade):
+        if produto in self.produtos:
+            self.produtos[produto] += quantidade
+        else:
+            self.produtos[produto] = quantidade
 
-while True:
-    print("\nMenu:")
-    print("1. Cadastrar produto")
-    print("2. Retirar produto")
-    print("3. Verificar estoque")
-    print("4. Sair")
-    opcao = input("Escolha uma opção: ")
+    def remover(self, produto, quantidade):
+        if produto in self.produtos and quantidade <= self.produtos[produto]:
+            self.produtos[produto] -= quantidade
+            if self.produtos[produto] == 0:
+                del self.produtos[produto]
+        else:
+            raise ValueError("Produto não disponível em quantidade suficiente.")
 
-    if not opcao.isdigit() or int(opcao) < 1 or int(opcao) > 4:
-        print("Opção inválida. Tente novamente.")
-        continue
+    def verificar(self):
+        return self.produtos
 
-    opcao = int(opcao)
+    def salvar(self):
+        with open(self.arquivo, 'w') as f:
+            json.dump(self.produtos, f)
 
-    if opcao == 1:
-        produto = input("Nome do produto: ")
-        quantidade = input("Quantidade: ")
+def main():
+    estoque = Estoque()
 
-        if not quantidade.isdigit() or int(quantidade) < 0:
-            print("Quantidade inválida. Tente novamente.")
+    while True:
+        print("\nMenu:")
+        print("1. Cadastrar produto")
+        print("2. Retirar produto")
+        print("3. Verificar estoque")
+        print("4. Sair")
+        opcao = input("Escolha uma opção: ")
+
+        if not opcao.isdigit() or int(opcao) < 1 or int(opcao) > 4:
+            print("Opção inválida. Tente novamente.")
             continue
 
-        quantidade = int(quantidade)
+        opcao = int(opcao)
 
-        if produto in estoque:
-            estoque[produto] += quantidade
-        else:
-            estoque[produto] = quantidade
+        if opcao == 1:
+            produto = input("Nome do produto: ")
+            quantidade = input("Quantidade: ")
 
-        print(f"{quantidade} unidades de {produto} foram adicionadas ao estoque.")
+            if not quantidade.isdigit() or int(quantidade) < 0:
+                print("Quantidade inválida. Tente novamente.")
+                continue
 
-    elif opcao == 2:
-        produto = input("Nome do produto: ")
-        quantidade = input("Quantidade: ")
+            quantidade = int(quantidade)
 
-        if not quantidade.isdigit() or int(quantidade) < 0:
-            print("Quantidade inválida. Tente novamente.")
-            continue
+            estoque.adicionar(produto, quantidade)
+            print(f"{quantidade} unidades de {produto} foram adicionadas ao estoque.")
 
-        quantidade = int(quantidade)
+        elif opcao == 2:
+            produto = input("Nome do produto: ")
+            quantidade = input("Quantidade: ")
 
-        if produto in estoque and quantidade <= estoque[produto]:
-            estoque[produto] -= quantidade
-            print(f"{quantidade} unidades de {produto} foram retiradas do estoque.")
-        else:
-            print("Produto não disponível em quantidade suficiente.")
+            if not quantidade.isdigit() or int(quantidade) < 0:
+                print("Quantidade inválida. Tente novamente.")
+                continue
 
-    elif opcao == 3:
-        print("\nEstoque atual:")
-        for produto, quantidade in estoque.items():
-            print(f"{produto}: {quantidade}")
+            quantidade = int(quantidade)
 
-    elif opcao == 4:
-        break
+            try:
+                estoque.remover(produto, quantidade)
+                print(f"{quantidade} unidades de {produto} foram retiradas do estoque.")
+            except ValueError as e:
+                print(e)
 
-    salvar_estoque(estoque)
+        elif opcao == 3:
+            produtos = estoque.verificar()
+            print("\nEstoque atual:")
+            for produto, quantidade in produtos.items():
+                print(f"{produto}: {quantidade}")
+
+        elif opcao == 4:
+            break
+
+        estoque.salvar()
+
+if __name__ == "__main__":
+    main()
