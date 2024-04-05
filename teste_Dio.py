@@ -1,3 +1,4 @@
-preco = preco2
-preco2 = 100
-print (preco)
+#preco = (int(precoa))
+precoa = 100
+#print (preco)
+print(precoa)
