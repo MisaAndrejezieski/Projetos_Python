@@ -1,4 +1,4 @@
-# Jogo da Forca em Python
+# Jogo da Forca em Python feito por A.I.
 
 # Escolha da palavra secreta pelo usuário
 palavra_secreta = input("Digite a palavra secreta: ").lower()
