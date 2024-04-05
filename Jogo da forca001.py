@@ -22,14 +22,14 @@ while True:
     # Adivinhar uma letra
     letra_adivinhada = input("Digite uma letra: ").lower()
 
-    # Verificar se a letra está na palavra
+    # Verificar se a letra esta na palavra
     if letra_adivinhada in palavra_secreta:
         letras_adivinhadas.append(letra_adivinhada)
     else:
         chances_restantes -= 1
         print(f"Letra não encontrada! Chances restantes: {chances_restantes}")
 
-    # Verificar se o usuário ganhou ou perdeu
+    # Verificar se o usuario ganhou ou perdeu
     if palavra_mostrada == palavra_secreta:
         ganhou = True
         break
