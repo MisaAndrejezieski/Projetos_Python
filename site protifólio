@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Portfólio de Misael</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            animation: bodyFadeIn 2s;
+        }
+        header {
+            background-color: #f8f9fa;
+            text-align: center;
+            padding: 20px;
+            width: 80%;
+        }
+        section {
+            margin: 20px;
+            width: 80%;
+            border: 1px solid #ccc;
+            padding: 10px;
+            box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+        }
+        @keyframes bodyFadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Bem-vindo ao meu Portfólio</h1>
+        <p>Meu nome é Misael, sou Analista e Desenvolvedor de Sistemas.</p>
+    </header>
+    <section>
+        <h2>Sobre Mim</h2>
+        <p>Insira aqui informações sobre você, sua formação, experiência, habilidades, etc.</p>
+    </section>
+    <section>
+        <h2>Projetos</h2>
+        <p>Aqui você pode listar alguns dos projetos nos quais trabalhou, com links para o código (se disponível) e uma breve descrição de cada um.</p>
+    </section>
+    <section>
+        <h2>Contato</h2>
+        <form id="contactForm">
+            <label for="name">Nome:</label><br>
+            <input type="text" id="name" name="name"><br>
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email"><br>
+            <label for="message">Mensagem:</label><br>
+            <textarea id="message" name="message"></textarea><br>
+            <input type="submit" value="Enviar">
+        </form>
+    </section>
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            alert('Mensagem enviada com sucesso!');
+        });
+    </script>
+</body>
+</html>
