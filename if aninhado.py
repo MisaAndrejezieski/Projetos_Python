@@ -1,28 +1,12 @@
-print("if aninhado é só um if dentro de outro if.")
+print("Um if aninhado é apenas um if dentro de outro if.")
 
-x = int(input("Digite um número: ")) 
-y = int(input("Digite um número: ")) 
-z = int(input("Digite um número: ")) 
+numeros = [int(input("Digite um número: ")) for _ in range(3)]
+nomes = ['x', 'y', 'z']
 
-maior_numero = max(x, y, z)
-menor_numero = min(x, y, z)
+maior_numero = max(numeros)
+menor_numero = min(numeros)
+numero_do_meio = sum(numeros) - maior_numero - menor_numero
 
-if maior_numero == x:
-    print("x é o maior número." f{x})
-elif maior_numero == y:
-    print("y é o maior número." f{y})
-else:
-    print("z é o maior número." f{z})
-
-if menor_numero == x:
-    print("x é o menor número.")
-elif menor_numero == y:
-    print("y é o menor número.")
-else:
-    print("z é o menor número.")
-if ((x > y) and (z > x)) or ((x > z) and (y > x)):
-    print("x é o número do meio.")
-if ((y > x) and (z > y)) or ((y > z ) and (x > y)):
-    print("y é o número do meio.")
-if ((z > x) and (y > z)) or ((z > y) and (x > z)):
-    print("y é o número do meio.")    
+print(f"{nomes[numeros.index(maior_numero)]} é o maior número: {maior_numero}")
+print(f"{nomes[numeros.index(menor_numero)]} é o menor número: {menor_numero}")
+print(f"{nomes[numeros.index(numero_do_meio)]} é o número do meio: {numero_do_meio}")
