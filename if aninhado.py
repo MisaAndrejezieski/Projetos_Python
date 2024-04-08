@@ -8,11 +8,11 @@ maior_numero = max(x, y, z)
 menor_numero = min(x, y, z)
 
 if maior_numero == x:
-    print("x é o maior número.")
+    print("x é o maior número." f{x})
 elif maior_numero == y:
-    print("y é o maior número.")
+    print("y é o maior número." f{y})
 else:
-    print("z é o maior número.")
+    print("z é o maior número." f{z})
 
 if menor_numero == x:
     print("x é o menor número.")
