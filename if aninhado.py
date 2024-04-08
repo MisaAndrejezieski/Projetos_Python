@@ -4,7 +4,7 @@ z = int(input("Digite um número: "))
 
 maior_numero = max(x, y, z)
 menor_numero = min(x, y, z)
-medio_numero = med(x, y, z)
+
 
 if maior_numero == x:
     print("x é o maior número.")
@@ -15,7 +15,13 @@ else:
 
 if menor_numero == x:
     print("x é o menor número.")
-elif maior_numero == y:
+elif menor_numero == y:
     print("y é o menor número.")
 else:
-    print("z é o maior número.")
+    print("z é o menor número.")
+if ((x > y) and (z > x)) or ((x > z) and (y > x)):
+    print("x é o número do meio.")
+if ((y > x) and (z > y)) or ((y > z ) and (x > y)):
+    print("y é o número do meio.")
+if ((z > x) and (y > z)) or ((z > y) and (x > z)):
+    print("y é o número do meio.")    
