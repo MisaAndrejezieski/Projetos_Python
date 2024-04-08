@@ -1,11 +1,11 @@
+print("if aninhado é só um if dentro de outro if.")
+
 x = int(input("Digite um número: ")) 
 y = int(input("Digite um número: ")) 
 z = int(input("Digite um número: ")) 
 
 maior_numero = max(x, y, z)
 menor_numero = min(x, y, z)
-
-print("if aninhado é só um if dentro de outro if.")
 
 if maior_numero == x:
     print("x é o maior número.")
