@@ -86,5 +86,5 @@ class ContaBancaria:
 
 
 # Para usar a classe ContaBancaria
-conta = ContaBancaria("misael".title(), "123456".)
+conta = ContaBancaria("misael".title(), "123456")
 conta.iniciar()
