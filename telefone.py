@@ -7,7 +7,7 @@ def validate_numero_telefone(phone_number):
     if re.match(pattern, phone_number):
         return '::: Número de telefone válido :::'.center(50)
     else:
-        return 'Número de telefone inválido.'
+        return '::: Número de telefone inválido.'
 
 
 # Solicita ao usuário que insira um número de telefone e armazena o valor fornecido na variável 'phone_number'.
