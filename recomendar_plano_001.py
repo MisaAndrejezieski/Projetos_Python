@@ -6,9 +6,9 @@ def recomendar_plano(consumo):
     elif consumo <= 50:
         print("Plano de 100Mbps por $100,00, nesta promação.")
         return "Plano Prata Fibra - 100Mbps"
-        
+    
     else:
-
+        
         print("Plano de 300Mbps por $200,00, nesta promação.")
         return "Plano Premium Fibra - 300Mbps"
 
