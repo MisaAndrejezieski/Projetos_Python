@@ -1,4 +1,4 @@
-plano = "plano de internet"
+plano = "Plano de internet"
 def recomendar_plano(nome, consumo):
     if consumo <= 10:
         print(f"{nome}, recomendamos o Plano de 50Mbps por $50,00, nesta promoção.")
@@ -19,7 +19,7 @@ try:
     consumo = float(input())
     # Chama a função recomendar_plano com o nome e o consumo inseridos e imprime o plano recomendado:
 
-    print(".".join(plano.upper))
+    print(".".join(plano))
     print(recomendar_plano(nome.title().center(20,"_"), consumo))
 except ValueError as e:
     print(f"Error: {e}")
