@@ -13,7 +13,7 @@ class ContaBancaria:
         SISTEMA BANCÁRIO DESAFIO PYTHON DIO.ME
 
         Nome: {self.nome}
-        Número da Conta: {self.numero_conta,(6,"##")}
+        Número da Conta: {self.numero_conta,(6, "##")}
 
         [1] Depositar
         [2] Sacar
