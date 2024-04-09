@@ -1,7 +1,7 @@
 class ContaBancaria:
     def __init__(self, nome, numero_conta,):
         self.nome = nome
-        self.numero_conta = numero_conta[:4],("##")
+        self.numero_conta = numero_conta[:4]
         self.saldo = 0
         self.limite = 500
         self.extrato = ""
@@ -13,7 +13,7 @@ class ContaBancaria:
         SISTEMA BANCÁRIO DESAFIO PYTHON DIO.ME
 
         Nome: {self.nome}
-        Número da Conta: {self.numero_conta}
+        Número da Conta: {self.numero_conta,("##")}
 
         [1] Depositar
         [2] Sacar
