@@ -17,7 +17,7 @@ try:
     print("Digite seu consumo médio por mês: ")
     consumo = float(input())
     # Chama a função recomendar_plano com o nome e o consumo inseridos e imprime o plano recomendado:
-    print(recomendar_plano(nome.title().center(5), consumo))
+    print(recomendar_plano(nome.title().center(20,"_"), consumo))
 except ValueError as e:
     print(f"Error: {e}")
 
