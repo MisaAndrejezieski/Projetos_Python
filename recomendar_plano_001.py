@@ -9,6 +9,7 @@ def recomendar_plano(consumo):
 
 try:
     # Solicita ao usuário que insira o consumo médio mensal de dados:
+    print("Digite seu consumo médio por mês: ")
     consumo = float(input())
     # Chama a função recomendar_plano com o consumo inserido e imprime o plano recomendado:
     print(recomendar_plano(consumo))
