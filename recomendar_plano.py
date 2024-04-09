@@ -1,16 +1,18 @@
+print("Digite seu consumo de internet: ")
+
 def recomendar_plano(consumo):
 
-  if consumo <= 10:
+    if consumo <= 10:
 
-    return "Plano Essencial Fibra - 50Mbps"
+        return "Plano Essencial Fibra - 50Mbps"
 
-  elif consumo <= 20:
+    elif consumo <= 20:
 
-    return "Plano Prata Fibra - 100Mbps"
+        return "Plano Prata Fibra - 100Mbps"
 
-  else:
+    else:
 
-    return "Plano Premium Fibra - 300Mbps"
+        return "Plano Premium Fibra - 300Mbps"
 
 
 
