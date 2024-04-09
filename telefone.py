@@ -1,5 +1,5 @@
 import re
-print("::: Válidando telefone:::".center(50))
+print("::: Válidando telefone :::".center(50))
 print("Digite o número do telefone seguindo o modelo '(42) 9xxxx-xxxx':")
 
 def validate_numero_telefone(phone_number):
