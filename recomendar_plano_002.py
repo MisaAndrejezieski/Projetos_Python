@@ -1,4 +1,4 @@
-plano = "PLANO DE INTERNET PARA NOVOS "
+plano = "PLANO DE INTERNET PARA NOVOS:"
 def recomendar_plano(nome, consumo):
     if consumo <= 10:
         print(f"{nome}, recomendamos o Plano de 50Mbps por $50,00, nesta promoção.")
