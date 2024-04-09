@@ -1,7 +1,7 @@
 class ContaBancaria:
     def __init__(self, nome, numero_conta):
         self.nome = nome
-        self.numero_conta = numero_conta
+        self.numero_conta = numero_conta[:.4]
         self.saldo = 0
         self.limite = 500
         self.extrato = ""
