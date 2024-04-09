@@ -13,7 +13,7 @@ class ContaBancaria:
         SISTEMA BANCÁRIO DESAFIO PYTHON DIO.ME
 
         Nome: {self.nome}
-        Número da Conta: {self.numero_conta,(6, "##")}
+        Número da Conta: {self.numero_conta,}
 
         [1] Depositar
         [2] Sacar
@@ -86,5 +86,5 @@ class ContaBancaria:
 
 
 # Para usar a classe ContaBancaria
-conta = ContaBancaria("misael".title(), "123456",)
+conta = ContaBancaria("misael".title(), "123456".center(6, ("##")),)
 conta.iniciar()
