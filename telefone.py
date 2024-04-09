@@ -1,6 +1,6 @@
 import re
 
-print("Digite o número do telefone:")
+print("Digite o número do telefone seguindo o modelo '(42) 9xxxx-xxxx':")
 
 def validate_numero_telefone(phone_number):
     pattern = r'\(\d{2}\) 9\d{4}-\d{4}'
