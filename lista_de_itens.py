@@ -1,7 +1,7 @@
 # Cria uma Lista 'itens' para armazenar os equipamentos:
 itens = []
 
-print("Digite sua lista de equipamento")
+print("Digite sua lista de equipamentos:")
 
 # Cria um loop para solicitar os itens ao usuário:
 for _ in range(3):
