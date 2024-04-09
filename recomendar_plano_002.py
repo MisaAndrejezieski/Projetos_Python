@@ -24,4 +24,4 @@ try:
 except ValueError as e:
     print(f"Error: {e}")
 
-print('Continuo processando')
+print('Continuando......')
