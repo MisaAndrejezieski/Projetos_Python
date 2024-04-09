@@ -1,5 +1,5 @@
 class ContaBancaria:
-    def __init__(self, nome, numero_conta,):
+    def __init__(self, nome, numero_conta):
         self.nome = nome
         self.numero_conta = numero_conta[:4]
         self.saldo = 0
@@ -86,5 +86,5 @@ class ContaBancaria:
 
 
 # Para usar a classe ContaBancaria
-conta = ContaBancaria("misael".title(), "123456".center(6, "##"))
+conta = ContaBancaria("misael".title(), "123456")
 conta.iniciar()
