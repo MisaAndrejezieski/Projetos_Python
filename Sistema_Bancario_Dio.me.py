@@ -1,9 +1,10 @@
 menu = """
+        SISTEMA BANCÁRIO DESAFIO PYTHON DIO.ME
 
-[1] Depositar
-[2] Sacar
-[3] Extrato
-[0] Sair
+    [1] Depositar
+    [2] Sacar
+    [3] Extrato
+    [0] Sair
 
 => """
 
@@ -26,6 +27,7 @@ while True:
 
         else:
             print("Operação falhou! O valor informado é inválido.")
+            print("para fazer depósito obrigatóriamente tem que ser um valor positivo.")
 
     elif opcao == "2":
         valor = float(input("Informe o valor do saque: "))
