@@ -1,4 +1,4 @@
-print("Um if aninhado é apenas um if dentro de outro if.")
+print("Um if aninhado")
 
 numeros = [int(input("Digite um número: ")) for _ in range(3)]
 nomes = ['primeiro numero', 'segundo numero', 'terceiro numero']
