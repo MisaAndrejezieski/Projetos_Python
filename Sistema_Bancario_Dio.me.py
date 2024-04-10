@@ -69,4 +69,4 @@ while True:
 
 
 
-print("Ter seu dinheiro conosco é nossa satisfação.".center(50,"-"))
+print("Ter seu dinheiro conosco é nossa satisfação.".center(48,"$"))
