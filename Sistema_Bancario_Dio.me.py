@@ -69,4 +69,4 @@ while True:
 
 
 
-print("É sempre um prazer ter você como cliente.")
+print("Ter seu dinheiro conosco é nossa satisfação.")
