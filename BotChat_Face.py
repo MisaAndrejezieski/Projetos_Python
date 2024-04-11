@@ -7,6 +7,7 @@ FACEBOOK_API_URL = 'https://graph.facebook.com/v2.6/me/messages'
 VERIFY_TOKEN = '<https://www.facebook.com/profile.php?id=100034358779961>'
 PAGE_ACCESS_TOKEN = '<https://www.facebook.com/profile.php?id=100034358779961>'
 
+#não funciona
 @app.route('/', methods=['GET'])
 def verify_webhook():
     if request.args.get('hub.verify_token') == VERIFY_TOKEN:
