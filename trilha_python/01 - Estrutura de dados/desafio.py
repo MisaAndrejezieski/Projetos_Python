@@ -3,7 +3,7 @@ import textwrap
 
 def menu():
     menu = """\n
-            Banco DESAFIO PYTHON
+            BANCO DESAFIO PYTHON
     ================ MENU ================
     [1]\tDepositar
     [2]\tSacar
