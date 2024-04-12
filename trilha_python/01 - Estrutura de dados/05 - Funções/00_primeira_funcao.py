@@ -17,7 +17,7 @@ def saudacao():
     print(f"Oi, {nome}!")
 
 # Para usar a função, basta chamar:
-saudacao()
+
 exibir_mensagem()
 exibir_mensagem_2(nome="Guilherme")
 exibir_mensagem_3()
