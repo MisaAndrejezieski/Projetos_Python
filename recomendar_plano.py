@@ -1,5 +1,3 @@
-print("Digite seu consumo de internet: ")
-
 def recomendar_plano(consumo):
 
     if consumo <= 10:
@@ -15,14 +13,9 @@ def recomendar_plano(consumo):
         return "Plano Premium Fibra - 300Mbps"
 
 
-
-
 # Solicita ao usuário que insira o consumo médio mensal de dados:
 
 consumo = float(input())
-
-
-
 
 # Chama a função recomendar_plano com o consumo inserido e imprime o plano recomendado:
 
