@@ -1,5 +1,6 @@
 import re
 print("::: Válidando telefone :::".center(50))
+# Recebe o nome do usuário.
 nome_usuario = input("Digite seu nome: ")
 
 
