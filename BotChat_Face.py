@@ -1,5 +1,5 @@
 from flask import Flask, request
-import requests
+import requests # type: ignore
 
 app = Flask(__name__)
 
