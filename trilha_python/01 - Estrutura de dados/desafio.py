@@ -7,9 +7,9 @@ def menu():
     [1]\tDepositar
     [2]\tSacar
     [3]\tExtrato
-    [4]\tNova conta
+    [4]\tNovo usuário
     [5]\tListar contas
-    [6]\tNovo usuário
+    [6]\tNova conta
     [0]\tSair
     ======================================
     => """
