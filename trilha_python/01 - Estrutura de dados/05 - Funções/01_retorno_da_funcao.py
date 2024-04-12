@@ -9,7 +9,7 @@ def retorna_antecessor_e_sucessor(numero):
     return antecessor, sucessor
 
 def antsec():
-    num = input("Digite o número: ")
+    num = input(int("Digite o número: "))
     ant = num - 1
     sec = num + 1
     print("O antecessor de", num, " é", ant, " e o sucessor de ",num, " é ",sec)
