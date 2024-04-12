@@ -7,7 +7,7 @@ def validate_numero_telefone(phone_number):
     pattern = r'\(\d{2}\) 9\d{4}-\d{4}'
     if re.match(pattern, phone_number):
         print("Olá,", nome_usuario, "Seu número é: ",phone_number)
-        return '::: Número de telefone válido :::'.center(50)
+        return '::: Número de telefone válido no Brasil. :::'.center(50)
     
     else:
         return '::: Número de telefone inválido :::'.center(50)
