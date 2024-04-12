@@ -2,7 +2,7 @@ import re
 #print("::: Válidando telefone :::".center(50))
 
 # Recebe o nome do usuário.
-nome_usuario = input("Digite seu nome: ")
+# nome_usuario = input("Digite seu nome: ")
 
 
 def validate_numero_telefone(phone_number):
