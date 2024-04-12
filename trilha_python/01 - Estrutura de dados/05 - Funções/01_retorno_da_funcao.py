@@ -3,6 +3,7 @@ def calcular_total(numeros):
 
 
 def retorna_antecessor_e_sucessor(numero):
+    print(" este é o antecessor de ")
     antecessor = numero - 1
     sucessor = numero + 1
 
