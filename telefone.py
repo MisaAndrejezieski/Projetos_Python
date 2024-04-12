@@ -10,7 +10,7 @@ def validate_numero_telefone(phone_number):
         return '::: Número de telefone válido no Brasil. :::'.center(50)
     
     else:
-        return '::: Número de telefone inválido :::'.center(50)
+        return '::: Número de telefone inválido no Brasil. :::'.center(50)
 
 
 # Solicita ao usuário que insira um número de telefone e armazena o valor fornecido na variável 'phone_number'.
