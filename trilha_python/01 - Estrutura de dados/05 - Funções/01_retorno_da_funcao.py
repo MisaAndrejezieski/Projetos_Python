@@ -8,6 +8,13 @@ def retorna_antecessor_e_sucessor(numero):
 
     return antecessor, sucessor
 
+def antecessor(num):
+    num = input("Digite o número: ")
+    ant = num - 1
+    sec = num + 1
+    print("O antecessor de", num, " é", ant, " e o sucessor de ",num, " é ",sec)
+
 
 print(calcular_total([10, 20, 34]))  # 64
 print(retorna_antecessor_e_sucessor(10))  # (9, 11)
+
