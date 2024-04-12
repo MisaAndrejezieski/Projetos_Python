@@ -1,11 +1,12 @@
 import re
 print("::: Válidando telefone :::".center(50))
+nome_usuario = input("Digite seu nome:")
 
 
 def validate_numero_telefone(phone_number):
     pattern = r'\(\d{2}\) 9\d{4}-\d{4}'
     if re.match(pattern, phone_number):
-        print("Seu número é: ", phone_number)
+        print("Olá,",{nome_usuario}, "Seu número é: ", phone_number)
         return '::: Número de telefone válido :::'.center(50)
     
     else:
