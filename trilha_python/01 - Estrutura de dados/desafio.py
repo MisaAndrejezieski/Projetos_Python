@@ -21,7 +21,7 @@ def depositar(saldo, valor, extrato, /):
         extrato += f"Depósito:\tR$ {valor:.2f}\n"
         print("\n=== Depósito realizado com sucesso! ===")
     else:
-       print("\nOperação falhou! O valor informado é inválido.".center(50,"#"))
+       print(" Operação falhou! O valor informado é inválido. ".center(54,"#"))
 
 
     return saldo, extrato
@@ -30,16 +30,16 @@ def depositar(saldo, valor, extrato, /):
 def sacar(*, saldo, valor, extrato, limite, numero_saques, limite_saques):
     excedeu_saldo = valor > saldo
     excedeu_limite = valor > limite
-    excedeu_saques = numero_saques >= limite_saques
+    excedeu_saques = numero_saques <= limite_saques
 
     if excedeu_saldo:
-        print("\n@@@ Operação falhou! Você não tem saldo suficiente. @@@")
+        print("\n Operação falhou! Você não tem saldo suficiente. ".center(60,"#"))
 
     elif excedeu_limite:
-        print("\n@@@ Operação falhou! O valor do saque excede o limite. @@@")
+        print("\n Operação falhou! O valor do saque excede o limite. ".center(54,"#"))
 
     elif excedeu_saques:
-        print("\n@@@ Operação falhou! Número máximo de saques excedido. @@@")
+        print("\n Operação falhou! Número máximo de saques excedido. ".center(54,"#"))
 
     elif valor > 0:
         saldo -= valor
@@ -48,7 +48,7 @@ def sacar(*, saldo, valor, extrato, limite, numero_saques, limite_saques):
         print("\n=== Saque realizado com sucesso! ===")
 
     else:
-        print("\n@@@ Operação falhou! O valor informado é inválido. @@@")
+        print("\n Operação falhou! O valor informado é inválido. ".center(54,"#"))
 
     return saldo, extrato
 
@@ -65,7 +65,7 @@ def criar_usuario(usuarios):
     usuario = filtrar_usuario(cpf, usuarios)
 
     if usuario:
-        print("\n@@@ Já existe usuário com esse CPF! @@@")
+        print("\n Já existe usuário com esse CPF! ".center(54,"#"))
         return
 
     nome = input("Informe o nome completo: ")
@@ -90,7 +90,7 @@ def criar_conta(agencia, numero_conta, usuarios):
         print("\n=== Conta criada com sucesso! ===")
         return {"agencia": agencia, "numero_conta": numero_conta, "usuario": usuario}
 
-    print("\n@@@ Usuário não encontrado, fluxo de criação de conta encerrado! @@@")
+    print("\n Usuário não encontrado, fluxo de criação de conta encerrado! ".center(54,"#"))
 
 
 def listar_contas(contas):
@@ -155,7 +155,7 @@ def main():
             break
 
         else:
-            print("Operação inválida, por favor selecione novamente a operação desejada.")
+            print(" Operação inválida, por favor selecione novamente a operação desejada.".center(70,"#"))
 
 
 main()
