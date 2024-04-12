@@ -4,6 +4,7 @@ def calcular_total(numeros):
 
 
 def retorna_antecessor_e_sucessor(numero):
+    numero = input("Digite o número: ")
     print("Estes são o antecessor e sucessor de ",numero)
     antecessor = numero - 1
     sucessor = numero + 1
