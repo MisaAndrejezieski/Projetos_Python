@@ -38,6 +38,8 @@ print(result)                   # Inicialmente, temos a string text com o valor 
 
 text = "hello world"
 result = text.swapcase()
-print(result)
+print(result)                   # Inicialmente, temos a string text com o valor "hello world".
+                                # A função swapcase() é chamada na string text. Essa função inverte as letras maiúsculas para minúsculas e vice-versa.
+                                # Portanto, a string resultante após a aplicação de swapcase() é HELLO WORLD.
 
 ################################################################################
