@@ -23,3 +23,12 @@ list_x = [1,2,3,4,5]     # Inicialmente, temos a lista list_x com os elementos [
                          # A lista list_x agora contém os elementos [1, 2, 3, 4], pois o 5 foi removido.
 result = list_x.pop()
 print(result) 
+
+################################################################################
+
+text = "hello world"
+expr = ('d', 'rld')
+result = text.endswith(expr)
+print(result) 
+
+################################################################################
