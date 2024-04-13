@@ -24,6 +24,12 @@ b1.parar()
 print(b1.cor, b1.modelo, b1.ano, b1.valor)
 
 b2 = bicicleta("verde","monark",2000,1890)
+b3 =bicicleta("azul","bmx",2012,1500)
 bicicleta.buzina(b2)
 b2.correr()
 print(b2.cor, b2.modelo, b2.ano, b2.valor)
+
+def __str__(self):
+    return f"bicicleta: {self.cor},{self.modelo},{self.ano},{self.valor}"
+
+print(b3)
