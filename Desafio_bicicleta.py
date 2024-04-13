@@ -15,6 +15,7 @@ class bicicleta:
     def correr(self):
         print("vrum.........")    
     def __str__(self):
+        print("-------------------------------")
         return f"bicicleta: Cor = {self.cor}, modelo = {self.modelo}, ano = {self.ano}, valor = {self.valor}"
 
 
