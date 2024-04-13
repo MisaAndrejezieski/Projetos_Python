@@ -12,7 +12,9 @@ print(numbers)        # como tuplas são imutáveis retorna ERRO.
 ###############################################################################
 
 nums = [1,2,3]        # cria uma lista
-nums.insert(4,3)      # Em seguida, a função insert(4, 3) é chamada. Isso significa que o valor 3 será inserido na posição 4 da lista (lembrando que as posições em Python começam em 0).
-print(nums)           # retorna  [1,2,3,3]
+nums.insert(4,3)      # Em seguida, a função insert(4, 3) é chamada. Isso significa que o valor 3 será inserido na posição 4 da lista (lembrando que         as posições em Python começam em 0).
+print(nums)           # Como a lista original tem apenas 3 elementos, o Python adiciona o valor 3 na última posição disponível, retorna  [1,2,3,3]
+
+###############################################################################
 
 
