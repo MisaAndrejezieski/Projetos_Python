@@ -45,8 +45,11 @@ print(result)                   # Inicialmente, temos a string text com o valor 
 ################################################################################
 text = "Hello world"
 res = '-'.join(text.split())
-print(res)
+print(res)                      # Inicialmente, temos a string text com o valor "Hello world".
+                                # A função split() é chamada na string text. Isso divide a string em palavras, criando uma lista de palavras: ["Hello", "world"].
+                                # Em seguida, a função join() é aplicada à lista de palavras, usando o caractere '-' como separador. Isso combina as palavras da lista com o separador, resultando na string "Hello-world".
 
+################################################################################
 
 
 
