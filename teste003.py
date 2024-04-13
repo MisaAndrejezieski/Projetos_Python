@@ -1,2 +1,2 @@
-string = "abcdef"
-print(string[::2])
+string = "abcdefghijklmnopqrstuvyxwz"
+print(string[::5])
