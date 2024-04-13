@@ -43,7 +43,9 @@ print(result)                   # Inicialmente, temos a string text com o valor 
                                 # Portanto, a string resultante após a aplicação de swapcase() é HELLO WORLD.
 
 ################################################################################
-
+text = "Hello world"
+res = '-'.join(text.split())
+print(res)
 
 
 
