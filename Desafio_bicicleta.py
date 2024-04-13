@@ -20,7 +20,7 @@ class bicicleta:
         return f"bicicleta: Cor = {self.cor}, modelo = {self.modelo}, ano = {self.ano}, valor = {self.valor}"
 
     def __str__(self):
-        return f"{self. __class__.__name__}:{'-'.join([ f'{chave} = {valor}' for chave, valor in self.__dict__.items()])}"
+        return f"{self. __class__.__name__}:{', '.join([ f'{chave} = {valor}' for chave, valor in self.__dict__.items()])}"
 
 b1 = bicicleta("vermelha", "caloi", 2022, 600)
 b2 = bicicleta("verde","monark",2000,1890)
