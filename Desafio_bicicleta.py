@@ -11,11 +11,13 @@ class bicicleta:
     def parar(self):
         print("Parando bicicleta...")
         print("Bicicleta parada.")
-        
+
     def correr(self):
         print("vrum.........")    
 
 
 b1 = bicicleta("vermelha", "caloi", 2022, 600)
 
-print(b1)
+b1.buzina()
+b1.correr()
+b1.parar()
