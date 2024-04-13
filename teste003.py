@@ -6,7 +6,7 @@ print(x)    # retorna [1,4,3].
 ###############################################################################
 
 numbers = (1,2,3,4,5) # criação de uma tupla, tupla são imutaveis. 
-numbers [0] = 10      # tenta trocar na posição 0 o número 1 por 10.
+#numbers [0] = 10      # tenta trocar na posição 0 o número 1 por 10.
 print(numbers)        # como tuplas são imutáveis retorna ERRO.
 
 ###############################################################################
@@ -17,6 +17,9 @@ print(nums)           # Como a lista original tem apenas 3 elementos, o Python a
 
 ###############################################################################
 
-list_x = [1,2,3,4,5]     # 
+list_x = [1,2,3,4,5]     # Inicialmente, temos a lista list_x com os elementos [1, 2, 3, 4, 5].
+                         # Em seguida, a função pop() é chamada sem argumentos. Isso remove o último elemento da lista e retorna esse elemento.
+                         # O último elemento da lista original é 5, portanto, o valor retornado pela função pop() é 5.
+                         # A lista list_x agora contém os elementos [1, 2, 3, 4], pois o 5 foi removido.
 result = list_x.pop()
 print(result) 
