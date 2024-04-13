@@ -5,7 +5,17 @@ class bicicleta:
         self.ano = ano
         self.valor = valor
 
+    def buzina(self):
+        print("plinplim...")
+
+    def parar(self):
+        print("Parando bicicleta...")
+        print("Bicicleta parada.")
+        
+    def correr(self):
+        print("vrum.........")    
+
 
 b1 = bicicleta("vermelha", "caloi", 2022, 600)
 
-#print(b1)
+print(b1)
