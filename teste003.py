@@ -29,6 +29,10 @@ print(result)
 text = "hello world"
 expr = ('d', 'rld')
 result = text.endswith(expr)
-print(result) 
+print(result)                   # Inicialmente, temos a string text com o valor "hello world".
+                                # A função endswith(expr) verifica se a string text termina com o sufixo especificado em expr.
+                                # O valor de expr é ('d', 'rld'). Isso significa que estamos verificando se a string text termina com a sequência de caracteres 'd' seguida por 'rld'.
+                                # Como a string text termina com a sequência 'rld', o resultado da função endswith(expr) é True.
 
 ################################################################################
+
