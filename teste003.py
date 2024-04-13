@@ -50,6 +50,10 @@ print(res)                      # Inicialmente, temos a string text com o valor 
                                 # Em seguida, a função join() é aplicada à lista de palavras, usando o caractere '-' como separador. Isso combina as palavras da lista com o separador, resultando na string "Hello-world".
 
 ################################################################################
+dict_x = {"name": "Prakash", "age": 23}
+dict_y = {"name": "joy"}
+dict_y.update(dict_x)
+print(dict_y)                    # retorna {'name', 'prakash', 'age':23}
 
 
 
