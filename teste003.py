@@ -12,7 +12,7 @@ print(numbers)        # como tuplas são imutáveis retorna ERRO.
 ###############################################################################
 
 nums = [1,2,3]        # cria uma lista
-nums.insert(4,3)
-print(nums)           #retorna  [1,2,3,3]
+nums.insert(4,3)      #
+print(nums)           # retorna  [1,2,3,3]
 
 
