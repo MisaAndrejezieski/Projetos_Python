@@ -17,4 +17,6 @@ print(nums)           # Como a lista original tem apenas 3 elementos, o Python a
 
 ###############################################################################
 
-
+list_x = [1,2,3,4,5]     # 
+result = list_x.pop()
+print(result) 
