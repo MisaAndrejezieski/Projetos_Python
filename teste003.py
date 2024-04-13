@@ -36,3 +36,8 @@ print(result)                   # Inicialmente, temos a string text com o valor 
 
 ################################################################################
 
+text = "hello world"
+result = text.swapcase()
+print(result)
+
+################################################################################
