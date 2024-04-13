@@ -1,3 +1,4 @@
-list_x = [1,2,3,4,5]
-result = list_x.pop()
+text = "hello world"
+expr = ('d', 'rld')
+result = text.endswith(expr)
 print(result)
