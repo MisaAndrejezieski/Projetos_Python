@@ -67,7 +67,6 @@ def conditions_func(data):
 
 values = [True, False, True, False]
 print(conditions_func(values))
-                                        # 
-
+                                        # retorna no
 
 ################################################################################
