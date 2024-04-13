@@ -1,9 +1,10 @@
 class bicicleta:
-    def __init__(self, cor, modelo, ano, valor):
+    def __init__(self, cor, modelo, ano, valor, aro=18):
         self.cor = cor
         self.modelo = modelo
         self.ano = ano
         self.valor = valor
+        self.aro = aro
 
     def buzina(self):
         print("plinplim...")
