@@ -57,7 +57,17 @@ print(dict_y)                    # retorna {'name', 'prakash', 'age':23}
 
 ################################################################################
 
+def conditions_func(data):
+    if all(data):
+        return "yes"
+    elif not all(data):
+        return "no"
+    else:
+        return "I don't know"
 
+values = [True, False, True, False]
+print(conditions_func(values))
+                                        # 
 
 
 ################################################################################
