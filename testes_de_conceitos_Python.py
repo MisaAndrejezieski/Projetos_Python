@@ -1,3 +1,5 @@
+# Testes de aprendizagem em Python.
+
 x = [1,2,3] # cria uma lista mutável.
 y = x       # a variavel y recebe x.
 y[1] = 4    # coloca o valor 4 na posição 1, como começa no 0 troca 2 por 4.
