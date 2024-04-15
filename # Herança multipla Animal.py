@@ -8,8 +8,9 @@ class Animal:
     
 
 class Mamifero(Animal):
-    def __init__(self, num_patas):
+    def __init__(self, num_patas, cor_pelo):
         self.num_patas = num_patas
+        self.cor_pelo = cor_pelo
         super().__init__(num_patas)
 
 class Ave(Animal):
@@ -17,6 +18,7 @@ class Ave(Animal):
         self.num_patas = num_patas
         super().__init__(num_patas)
 
+    
 class Cachorro(Mamifero):
     pass
 
@@ -29,5 +31,5 @@ class Leao(Mamifero):
 class Onitorico(Ave, Mamifero):
     pass
 
-gato = Gato(4)
+gato = Gato(4, "preto")
 print(gato)
