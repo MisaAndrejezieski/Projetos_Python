@@ -1,6 +1,6 @@
 # Testes de aprendizagem em Python.
 
-
+# Pergunta da Dio.me
 class Foo:
     def hello(self):
         print(self.__class__.__name__.lower())
@@ -12,7 +12,9 @@ class Bar(Foo):
 
 
 bar = Bar()
-bar.hello()
+bar.hello() # Resposta da Dio.me foo, mas, é bar.
+
+###############################################################################
 
 x = [1,2,3] # cria uma lista mutável.
 y = x       # a variavel y recebe x.
