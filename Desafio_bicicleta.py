@@ -33,6 +33,6 @@ b1.correr() # chama a função correr.
 b1.parar()  # chama a função parar.
 b2.correr() # chama a função correr.
 print(b2.cor, b2.modelo, b2.ano, b2.valor) # printa o objeto bicicleta b2.
-print(b1.cor, b1.modelo, b1.ano, b1.valor)
+print(b1.cor, b1.modelo, b1.ano, b1.valor) # printa o objeto bicicleta b1.
 print(b2)
 print(b3)
