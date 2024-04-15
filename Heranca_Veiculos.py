@@ -17,8 +17,13 @@ class Carro(Veiculos):
     pass
 
 class Caminhao(Veiculos):
-    pass
+    def __init__(self, carregado):
+        self.esta_carregado = carregado
 
-moto = Motocicleta('preta', 'abc1234',2)
-moto.ligar_motor()
-print(moto)
+    def esta_carregado(self):
+        print( f"{'Sim' if self.esta_carregado else 'Não'} Estou carregado.")
+
+# moto = Motocicleta('preta', 'abc1234',2)
+# moto.ligar_motor()
+# print(moto)
+Caminhao.esta_carregado()
