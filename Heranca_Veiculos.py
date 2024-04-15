@@ -1,4 +1,4 @@
-class veiculos:
+class Veiculos:
     def __init__(self, cor, placa, numero_rodas):
         self.cor = cor
         self.placa = placa
@@ -7,13 +7,13 @@ class veiculos:
     def ligar_motor(self):
         print("Ligando o motor")
 
-class Motocicleta(veiculos):
+class Motocicleta(Veiculos):
     pass
 
-class Carro(veiculos):
+class Carro(Veiculos):
     pass
 
-class Caminhao(veiculos):
+class Caminhao(Veiculos):
     pass
 
 moto = Motocicleta("vermelha", "123", 2)
