@@ -7,8 +7,10 @@ class Veiculos:
     def ligar_motor(self):
         print("Ligando o motor")
 
+    def __str__(self):
+        
+
 class Motocicleta(Veiculos):
-    print("moto")
     pass
 
 class Carro(Veiculos):
@@ -17,6 +19,6 @@ class Carro(Veiculos):
 class Caminhao(Veiculos):
     pass
 
-moto = Motocicleta("vermelha","ABC-1234",2)
+moto = Motocicleta('preta', 'abc1234',2)
 moto.ligar_motor()
 print(moto)
