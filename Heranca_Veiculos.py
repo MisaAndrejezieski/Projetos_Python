@@ -25,9 +25,11 @@ class Caminhao(Veiculos):
     def esta_carregado(self):
         print( f"{'Sim' if self.carregado else 'Não'} Estou carregado.")
 
-# moto = Motocicleta('preta', 'abc1234',2)
-# moto.ligar_motor()
-# print(moto)
+carro = Carro("Azul", "MISA1313",4)
+print(carro)
+moto = Motocicleta('preta', 'abc1234',2)
+moto.ligar_motor()
+print(moto)
 Caminhao = Caminhao("roxo", "dfg-7894", 6, False)
 print(Caminhao)
 Caminhao.esta_carregado()
