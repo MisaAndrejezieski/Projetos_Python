@@ -8,6 +8,7 @@ class Veiculos:
         print("Ligando o motor")
 
 class Motocicleta(Veiculos):
+    print("moto")
     pass
 
 class Carro(Veiculos):
@@ -16,5 +17,6 @@ class Carro(Veiculos):
 class Caminhao(Veiculos):
     pass
 
-moto = Motocicleta("vermelha", "123", 2)
+moto = Motocicleta("vermelha","ABC-1234",2)
+moto.ligar_motor()
 print(moto)
