@@ -18,7 +18,7 @@ class Carro(Veiculos):
 
 class Caminhao(Veiculos):
     def __init__(self, cor, placa, numero_rodas, carregado):
-        super(). __init__{cor, placa, numero_rodas}
+        super().__init__{cor, placa, numero_rodas}
         self.carregado = carregado
 
     
