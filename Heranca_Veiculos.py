@@ -16,3 +16,4 @@ class Carro(veiculos):
 class Caminhao(veiculos):
     pass
 
+moto = Motocicleta(vermelha, 123, 2)
