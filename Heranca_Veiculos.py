@@ -17,7 +17,7 @@ class Carro(Veiculos):
     pass
 
 class Caminhao(Veiculos):
-    def __init__(self, carregado):
+    def __init__(self, cor, placa, numero_rodas, carregado):
         self.carregado = carregado
 
     def esta_carregado(self):
@@ -26,4 +26,6 @@ class Caminhao(Veiculos):
 # moto = Motocicleta('preta', 'abc1234',2)
 # moto.ligar_motor()
 # print(moto)
+Caminhao = Caminhao("roxo", "dfg-7894", 6, False)
+print(Caminhao)
 Caminhao.esta_carregado()
