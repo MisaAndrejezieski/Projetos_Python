@@ -31,10 +31,10 @@ class Gato(Mamifero):
 class Leao(Mamifero):
     pass
 
-class Ornitorico(Mamifero, Ave):
+class Ornitorrico(Mamifero, Ave):
     pass
 
 gato = Gato(cor_pelo="preto", num_patas=4)
 print(gato)
-ornitorinco = Ornitorico(cor_pelo="cinza_escuro", cor_bico="cinza_claro", num_patas=4)
-print(ornitorinco)
+ornitorrinco = Ornitorrico(cor_pelo="cinza_escuro", cor_bico="cinza_claro", num_patas=4)
+print(ornitorrinco)
