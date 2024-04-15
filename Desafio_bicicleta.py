@@ -30,7 +30,7 @@ b3 = bicicleta("azul","bmx",2012,1500)
 
 b1.buzina() # chama a função buzinar.
 b1.correr() # chama a função correr.
-b1.parar()
+b1.parar()  # chama a função parar.
 b2.correr()
 print(b2.cor, b2.modelo, b2.ano, b2.valor)
 print(b1.cor, b1.modelo, b1.ano, b1.valor)
