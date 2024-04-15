@@ -16,4 +16,6 @@ class Carro(veiculos):
 class Caminhao(veiculos):
     pass
 
-moto = Motocicleta("vermelha", 123, 2)
+moto = Motocicleta("vermelha", "123", 2)
+print(moto)
+
