@@ -15,8 +15,8 @@ class Mamifero(Animal):
 
 class Ave(Animal):
     def __init__(self, num_patas, cor_bico):
-        self.num_patas = num_patas
         self.cor_bico = cor_bico
+        super(). __init__(num_patas)
         
 
     
@@ -36,5 +36,5 @@ class Ornitorico(Mamifero, Ave):
 
 gato = Gato(4, "preto")
 print(gato)
-ornitorinco = Ornitorico(4, "cinza_escuro")
+ornitorinco = Ornitorico(4, "cinza_escuro", "cinza_claro")
 print(ornitorinco)
