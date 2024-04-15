@@ -11,12 +11,15 @@ class Mamifero(Animal):
     def __init__(self, num_patas, cor_pelo):
         self.num_patas = num_patas
         self.cor_pelo = cor_pelo
-        super().__init__(num_patas)
+
 
 class Ave(Animal):
-    def __init__(self, num_patas):
+    def __init__(self, num_patas, cor_bico):
         self.num_patas = num_patas
-        super().__init__(num_patas)
+        self.cor_bico = cor_bico
+        
+
+    
 
     
 class Cachorro(Mamifero):
@@ -28,8 +31,10 @@ class Gato(Mamifero):
 class Leao(Mamifero):
     pass
 
-class Onitorico(Ave, Mamifero):
+class Ornitorico(Ave, Mamifero):
     pass
 
 gato = Gato(4, "preto")
 print(gato)
+ornitorinco = Ornitorico(12, "vermelho")
+print(ornitorinco)
