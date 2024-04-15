@@ -8,7 +8,8 @@ class Animal:
     
 
 class Mamifero(Animal):
-    def __init__(self, num_patas)
+    def __init__(self, num_patas):
+        self.num_patas = num_patas
         super().__init__(num_patas)
 
 class Ave(Animal):
