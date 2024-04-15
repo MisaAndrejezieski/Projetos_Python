@@ -35,4 +35,4 @@ b2.correr() # chama a função correr.
 print(b2.cor, b2.modelo, b2.ano, b2.valor) # printa o objeto bicicleta b2.
 print(b1.cor, b1.modelo, b1.ano, b1.valor) # printa o objeto bicicleta b1.
 print(b2)   # chama o método __str__ para b2.
-print(b3)
+print(b3)   # chama o método __str__ para b3.
