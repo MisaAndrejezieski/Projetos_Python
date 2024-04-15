@@ -18,4 +18,3 @@ class Caminhao(Veiculos):
 
 moto = Motocicleta("vermelha", "123", 2)
 print(moto)
-
