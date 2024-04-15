@@ -1,1 +1,3 @@
-# Herança multipla A
+# Herança multipla Animal
+class Animal():
+    
