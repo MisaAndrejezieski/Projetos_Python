@@ -8,13 +8,13 @@ class Animal:
     
 
 class Mamifero(Animal):
-    def __init__(self, num_patas, cor_pelo):
+    def __init__(self, cor_pelo, **Kw):
         self.cor_pelo = cor_pelo
         super(). __init__(num_patas)
 
 
 class Ave(Animal):
-    def __init__(self, num_patas, cor_bico):
+    def __init__(self, cor_bico, **Kw):
         self.cor_bico = cor_bico
         super(). __init__(num_patas)
         
