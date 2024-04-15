@@ -28,8 +28,8 @@ b1 = bicicleta("vermelha", "caloi", 2022, 600)
 b2 = bicicleta("verde","monark",2000,1890)
 b3 = bicicleta("azul","bmx",2012,1500)
 
-b1.buzina()
-b1.correr()
+b1.buzina() # chama a função buzinar.
+b1.correr() # chama a função correr.
 b1.parar()
 b2.correr()
 print(b2.cor, b2.modelo, b2.ano, b2.valor)
