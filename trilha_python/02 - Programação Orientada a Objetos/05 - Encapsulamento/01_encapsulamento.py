@@ -4,11 +4,11 @@ class Conta:
         self.nro_agencia = nro_agencia
 
     def depositar(self, valor):
-        # ... saldo
+        # ... saldo público
         self._saldo += valor
 
     def sacar(self, valor):
-        # ...
+        # ... saque público
         self._saldo -= valor
 
     def mostrar_saldo(self):
