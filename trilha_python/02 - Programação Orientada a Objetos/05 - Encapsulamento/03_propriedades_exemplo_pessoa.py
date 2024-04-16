@@ -1,4 +1,4 @@
-# @property
+# @property de nome e idade:
 
 class Pessoa:
     def __init__(self, nome, ano_nascimento):
