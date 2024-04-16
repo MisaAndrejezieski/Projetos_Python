@@ -14,6 +14,7 @@ class Conta:
     def mostrar_saldo(self):
         # ... saldo privado
         print("Seu saldo é: R$ ",self._saldo)
+        return self.mostrar_saldo
         
 
 
