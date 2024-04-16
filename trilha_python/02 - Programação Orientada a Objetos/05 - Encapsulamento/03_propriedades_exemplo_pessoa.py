@@ -14,5 +14,5 @@ class Pessoa:
 pessoa = Pessoa("Guilherme", 1994)
 print(f"Nome: {pessoa.nome} \tIdade: {pessoa.idade}")
 
-pessoa1 = Pessoa("misael", 1982)
+pessoa1 = Pessoa("Misael", 1982)
 print(f"Nome: {pessoa1.nome} \tIdade: {pessoa1.idade}")
