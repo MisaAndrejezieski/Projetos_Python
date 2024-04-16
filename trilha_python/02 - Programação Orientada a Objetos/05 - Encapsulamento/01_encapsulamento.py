@@ -13,7 +13,8 @@ class Conta:
 
     def mostrar_saldo(self):
         # ... saldo privado
-        return self._saldo
+        print("Seu saldo é: R$ ",self._saldo)
+        
 
 
 conta = Conta("Agencia = 0001", 000)
