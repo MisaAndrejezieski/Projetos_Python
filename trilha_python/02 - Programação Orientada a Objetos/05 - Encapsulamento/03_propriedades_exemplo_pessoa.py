@@ -1,3 +1,5 @@
+# @property
+
 class Pessoa:
     def __init__(self, nome, ano_nascimento):
         self.nome = nome
