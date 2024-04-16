@@ -12,7 +12,7 @@ class Conta:
         self._saldo -= valor
 
     def mostrar_saldo(self):
-        # ...
+        # ... saldo privado
         return self._saldo
 
 
