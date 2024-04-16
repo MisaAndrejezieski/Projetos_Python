@@ -4,7 +4,7 @@ class Conta:
         self.nro_agencia = nro_agencia
 
     def depositar(self, valor):
-        # ...
+        # ... saldo
         self._saldo += valor
 
     def sacar(self, valor):
