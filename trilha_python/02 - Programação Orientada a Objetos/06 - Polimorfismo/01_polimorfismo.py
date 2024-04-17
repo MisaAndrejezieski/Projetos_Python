@@ -2,6 +2,7 @@
 
 class Passaro:
     def voar(self, asa):
+        self.asa = asa
         print("Voando...")
     
         def __init__(self, asa):
@@ -33,7 +34,7 @@ def plano_voo(obj): # Defini o objeto, onde obj é filho de pássaro e defini o 
     obj.voar()
 
 
-passaro = Passaro(True)
+passaro = Passaro()
 
 plano_voo(Pardal())
 plano_voo(Avestruz())
