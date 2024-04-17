@@ -34,10 +34,10 @@ def plano_voo(obj): # Defini o objeto, onde obj é filho de pássaro e defini o 
     obj.voar()
 
 
-passaro = Passaro()
+passaro = Passaro(2)
 
 plano_voo(Pardal())
 plano_voo(Avestruz())
 plano_voo(galinha())
 plano_voo(Aviao())
-print(passaro()) # depois eu resolvo. 17/04/2024
+print(passaro.asa) # depois eu resolvo. 17/04/2024
