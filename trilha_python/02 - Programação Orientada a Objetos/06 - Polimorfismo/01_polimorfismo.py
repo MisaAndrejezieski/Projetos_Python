@@ -37,4 +37,4 @@ plano_voo(Pardal())
 plano_voo(Avestruz())
 plano_voo(galinha())
 plano_voo(Aviao())
-print(Passaro()) # depois
+print(Passaro()) # depois eu resolvo. 17/04/2024
