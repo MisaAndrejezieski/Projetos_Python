@@ -26,9 +26,6 @@ class Aviao(Passaro):
 def plano_voo(obj): # Defini o objeto, onde obj é filho de pássaro e defini o voar para cada classe.
     obj.voar()
 
-
-passaro = Passaro(2)
-
 plano_voo(Pardal())
 plano_voo(Avestruz())
 plano_voo(galinha())
