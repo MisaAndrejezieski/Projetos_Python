@@ -1,10 +1,14 @@
 # Polimorfismo:
 
 class Passaro:
-    def voar(self):
+    def voar(self, asa):
         print("Voando...")
-    def __str__(self):
-        return f"{self.__class__.__name__}: {', '.join([f'{chave}={valor}' for chave, valor in self.__dict__.items()])}"
+    
+        def __init__(self, asa):
+            self.asa = asa
+
+        def __str__(self):
+            return f"{self.__class__.__name__}: {', '.join([f'{chave}={valor}' for chave, valor in self.__dict__.items()])}"
 
 class Pardal(Passaro):
     def voar(self):
@@ -33,4 +37,4 @@ plano_voo(Pardal())
 plano_voo(Avestruz())
 plano_voo(galinha())
 plano_voo(Aviao())
-print(Passaro)
+print(Passaro()) # depois
