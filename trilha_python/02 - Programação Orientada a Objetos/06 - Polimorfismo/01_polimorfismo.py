@@ -21,7 +21,7 @@ class Aviao(Passaro):
         print("Avião está decolando...")
 
 
-def plano_voo(obj):
+def plano_voo(obj): # Defini o objeto, onde obj é filho de pássaro e defini o voar para cada classe.
     obj.voar()
 
 
