@@ -1,4 +1,4 @@
-# NÃO FUNCIONA
+# NÃO FUNCIONA 
 
 from flask import Flask, request
 import requests # type: ignore
