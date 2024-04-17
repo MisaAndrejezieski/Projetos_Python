@@ -29,4 +29,5 @@ def plano_voo(obj): # Defini o objeto, onde obj é filho de pássaro e defini o 
 
 plano_voo(Pardal())
 plano_voo(Avestruz())
+plano_voo(galinha())
 plano_voo(Aviao())
