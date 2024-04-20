@@ -1,6 +1,5 @@
-from abc import ABC, abstractclassmethod, abstractproperty
+from abc import ABC, abstractmethod, abstractproperty
 from datetime import datetime
-
 
 class Cliente:
     def __init__(self, endereco):
@@ -59,7 +58,7 @@ class Conta:
         excedeu_saldo = valor > saldo
 
         if excedeu_saldo:
-            print("\n@@@ Operação falhou! Você não tem saldo suficiente. @@@")
+            print("\n@@@ Operação falhou! Você não tem saldo suficiente. @@@@")
 
         elif valor > 0:
             self._saldo -= valor
@@ -97,7 +96,7 @@ class ContaCorrente(Conta):
         excedeu_saques = numero_saques >= self.limite_saques
 
         if excedeu_limite:
-            print("\n@@@ Operação falhou! O valor do saque excede o limite. @@@")
+            print("\n@@@ Operação falhou! O valor do saque excede o limite. @@@@")
 
         elif excedeu_saques:
             print("\n@@@ Operação falhou! Número máximo de saques excedido. @@@")
@@ -139,7 +138,7 @@ class Transacao(ABC):
     def valor(self):
         pass
 
-    @abstractclassmethod
+    @abstractmethod
     def registrar(self, conta):
         pass
 
