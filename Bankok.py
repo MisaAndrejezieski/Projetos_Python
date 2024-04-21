@@ -111,7 +111,7 @@ def acessar_conta():
                 print("\nContas disponíveis:")
                 for i, conta in enumerate(usuario.contas):
                     print(f"[{i+1}] Conta: {conta.numero_conta} Agencia: {conta.agencia}")
-                opcao_conta = int(input("Selecione o  conta que deseja acessar: ")) - 1
+                opcao_conta = int(input("Selecione o numero da conta que deseja acessar: ")) - 1
                 if opcao_conta >= 0 and opcao_conta < len(usuario.contas):
                     conta = usuario.contas[opcao_conta]
                     while True:
