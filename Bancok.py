@@ -11,7 +11,7 @@ def menu():     # Função exibir menu
     [1] Depositar
     [2] Sacar
     [3] Extrato
-    
+    -----------------
     [4] Nova conta
     [5] Listar contas
     [6] Novo usuário
