@@ -6,7 +6,7 @@ decimal_precision = Decimal('0.01')     # Definir precisão decimal
 def menu():     # Função exibir menu
 
     menu = f"""
-    Seja bem vindo(a)!
+    Seja bem vindo(a)! Ao Bancok.
 
     [1] Depositar
     [2] Sacar
