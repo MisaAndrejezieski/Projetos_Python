@@ -56,11 +56,13 @@ contas = []
 
 def menu_principal():
     print("""
-    Seja bem vindo(a) ao BANKOK
+    Seja bem vindo(a)!
 
     [1] Cadastrar novo usuário
     [2] Cadastrar nova conta
     [3] Acessar conta
+    [4] Listar usuários
+    [5] Listar contas
 
     [0] Sair
     """)
@@ -109,7 +111,7 @@ def acessar_conta():
                 print("\nContas disponíveis:")
                 for i, conta in enumerate(usuario.contas):
                     print(f"[{i+1}] Conta: {conta.numero_conta} Agencia: {conta.agencia}")
-                opcao_conta = int(input("Selecione a conta que deseja acessar: ")) - 1
+                opcao_conta = int(input("Selecione o  conta que deseja acessar: ")) - 1
                 if opcao_conta >= 0 and opcao_conta < len(usuario.contas):
                     conta = usuario.contas[opcao_conta]
                     while True:
@@ -133,6 +135,22 @@ def acessar_conta():
             return
     print("Usuário não encontrado. Use um CPF cadastrado.")
 
+def listar_usuarios():
+    if len(usuarios) > 0:
+        print("\nUsuários cadastrados:")
+        for i, usuario in enumerate(usuarios):
+            print(f"[{i+1}] Nome: {usuario.nome} CPF: {usuario.cpf}")
+    else:
+        print("Nenhum usuário cadastrado.")
+
+def listar_contas():
+    if len(contas) > 0:
+        print("\nContas cadastradas:")
+        for i, conta in enumerate(contas):
+            print(f"[{i+1}] Conta: {conta.numero_conta} Agencia: {conta.agencia} Titular: {conta.usuario.nome}")
+    else:
+        print("Nenhuma conta cadastrada.")
+
 def main():
     while True:
         opcao = menu_principal()
@@ -142,6 +160,10 @@ def main():
             criar_conta()
         elif opcao == "3":
             acessar_conta()
+        elif opcao == "4":
+            listar_usuarios()
+        elif opcao == "5":
+            listar_contas()
         elif opcao == "0":
             print("Obrigado por usar nossos Serviços!")
             break
