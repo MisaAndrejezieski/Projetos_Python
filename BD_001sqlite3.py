@@ -17,8 +17,12 @@ cursor.execute('''
 ''')
 
 # Insira alguns dados na tabela
-cursor.execute("INSERT INTO clientes (nome, email, endereço) VALUES (?, ?, ?)", ('João', 'joao@email.com', "Rua dos Joãozinhos"))
-cursor.execute("INSERT INTO clientes (nome, email, endereço) VALUES (?, ?, ?)", ('Maria', 'maria@email.com', "Rua das Mariazinhas"))
+cursor.execute("INSERT INTO clientes (nome, email, endereço) VALUES (?, ?, ?)", ('João', 'joao@email.com', 'Rua dos Joãozinhos'))
+cursor.execute("INSERT INTO clientes (nome, email, endereço) VALUES (?, ?, ?)", ('Maria', 'maria@email.com', 'Rua das Mariazinhas'))
+cursor.execute("INSERT INTO clientes (nome, email, endereço) VALUES (?, ?, ?)", ('Ana', 'ana@email.com', 'Rua das Aninhas'))
+cursor.execute("INSERT INTO clientes (nome, email, endereço) VALUES (?, ?, ?)", ('Pedro', 'pedro@email.com', 'Rua dos Pedrinhos'))
+cursor.execute("INSERT INTO clientes (nome, email, endereço) VALUES (?, ?, ?)", ('Joana', 'joana@email.com', 'Rua das Joaninhas'))
+cursor.execute("INSERT INTO clientes (nome, email, endereço) VALUES (?, ?, ?)", ('Luana', 'luana@email.com', 'Rua das Cachorras'))
 
 # Imprima os dados dos clientes
 cursor.execute("SELECT * FROM clientes")
