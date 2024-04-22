@@ -150,14 +150,14 @@ def listar_usuarios():
                 print("Detalhes da Conta:")
                 for conta in usuario.contas:
                     print(f"Conta: {conta.numero_conta} Agencia: {conta.agencia}")
-            print("\n======================= BANK0K =======================")        
+            print("\n======================= LISTAR USUÁRIOS =======================")        
 
     else:
         print("Nenhum usuário cadastrado.")
 
 def listar_contas():
     if len(contas) > 0:
-        print("\n======================= BANK0K =======================")
+        print("\n======================= LISTAR CONTAS =======================")
         print("\nContas cadastradas:")
         for i, conta in enumerate(contas):
             print(f"[{i+1}] Conta: {conta.numero_conta} Agencia: {conta.agencia} Titular: {conta.usuario.nome}")
