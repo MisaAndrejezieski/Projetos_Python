@@ -1,37 +1,41 @@
-def calcular(operacao):
-    def somar(a, b):
-        return a + b
+def soma(a, b):
+    return a + b
 
-    def subtrair(a, b):
-        return a - b
+def subtracao(a, b):
+    return a - b
 
-    def multiplicar(a, b):
-        return a * b
+def multiplicacao(a, b):
+    return a * b
 
-    def dividir(a, b):
-        if b != 0:
-            return a / b
-        else:
-            return "Erro: Divisão por zero não é permitida"
-
-    if operacao == "+":
-        return somar
-    elif operacao == "-":
-        return subtrair
-    elif operacao == "*":
-        return multiplicar
-    elif operacao == "/":
-        return dividir
+def divisao(a, b):
+    if b != 0:
+        return a / b
+    else:
+        return "Erro: Divisão por zero não é permitida"
 
 while True:
-    a = int(input("Digite o primeiro número (ou -1 para sair): "))
-    if a == -1:
+    print("Escolha a operação:")
+    print("1. Soma")
+    print("2. Subtração")
+    print("3. Multiplicação")
+    print("4. Divisão")
+    print("5. Sair")
+    escolha = input("Digite sua escolha (1/2/3/4/5): ")
+
+    if escolha == '5':
+        print("Saindo do programa...")
         break
 
-    b = int(input("Digite o segundo número: "))
-    operacao = input("Digite sua operação (+, -, *, /): ")
+    num1 = float(input("Digite o primeiro número: "))
+    num2 = float(input("Digite o segundo número: "))
 
-    funcao = calcular(operacao)
-    resultado = funcao(a, b)
-
-    print("O resultado é: ", resultado)
+    if escolha == '1':
+        print("Resultado: ", soma(num1, num2))
+    elif escolha == '2':
+        print("Resultado: ", subtracao(num1, num2))
+    elif escolha == '3':
+        print("Resultado: ", multiplicacao(num1, num2))
+    elif escolha == '4':
+        print("Resultado: ", divisao(num1, num2))
+    else:
+        print("Escolha inválida!")
