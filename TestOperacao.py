@@ -20,7 +20,7 @@ while True:
     print("3. Multiplicação")
     print("4. Divisão")
     print("5. Sair")
-    escolha = input("Digite sua escolha (1/2/3/4/5): ")
+    escolha = input("Digite qual operação quer fazer: ")
 
     if escolha == '5':
         print("Saindo do programa...")
