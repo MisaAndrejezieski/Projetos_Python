@@ -56,7 +56,7 @@ contas = []
 
 def menu_principal():
     print("""
-    Seja bem vindo(a)!
+    Seja bem vindo(a) nosso BANKOK.
 
     [1] Cadastrar novo usuário
     [2] Cadastrar nova conta
