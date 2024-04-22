@@ -1,7 +1,7 @@
 import sqlite3
 
 # Conecte-se ao banco de dados (ou crie um se não existir)
-conexao = sqlite3.connect('anco_de_dados.db')
+conexao = sqlite3.connect('banco_de_dados.db')
 
 # Crie um cursor para executar comandos SQL
 cursor = conexao.cursor()
@@ -11,13 +11,14 @@ cursor.execute('''
     CREATE TABLE clientes (
         id INTEGER PRIMARY KEY,
         nome TEXT,
-        email TEXT
+        email TEXT,
+        endereço TEXT
     )
 ''')
 
 # Insira alguns dados na tabela
-cursor.execute("INSERT INTO clientes (nome, email) VALUES (?, ?)", ('João', 'joao@email.com'))
-cursor.execute("INSERT INTO clientes (nome, email) VALUES (?, ?)", ('Maria', 'maria@email.com'))
+cursor.execute("INSERT INTO clientes (nome, email, endereço) VALUES (?, ?, ?)", ('João', 'joao@email.com', "Rua dos Joãozinhos"))
+cursor.execute("INSERT INTO clientes (nome, email, endereço) VALUES (?, ?, ?)", ('Maria', 'maria@email.com', "Rua das Mariazinhas"))
 
 # Imprima os dados dos clientes
 cursor.execute("SELECT * FROM clientes")
