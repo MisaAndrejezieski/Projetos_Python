@@ -5,28 +5,20 @@ def calcular(operacao):
     def subtracao(a, b):
         return a - b
 
-    def multiplicacao(a, b):
-        return a * b
-    
-    def divisao(a, b):
-        return a / b
-    
-    match operacao:
-        case "+":
-            return somar
-        case "-":
-            return subtracao
-        case "*":
-            return multiplicacao
-        case "/":
-            return divisao
-        
+    if operacao == "+":
+        return somar
+    else:
+        return subtracao
 
-a = int(input("Digite o primeiro número: "))
-b = int(input("Digite o segundo número: "))
-operacao = input("Digite sua operação: ")
+while True:
+    a = int(input("Digite o primeiro número (ou -1 para sair): "))
+    if a == -1:
+        break
 
-funcao = calcular(operacao)
-resultado = funcao(a, b)
+    b = int(input("Digite o segundo número: "))
+    operacao = input("Digite sua operação: ")
 
-print("O resultado é: ", resultado)
+    funcao = calcular(operacao)
+    resultado = funcao(a, b)
+
+    print("O resultado é: ", resultado)
