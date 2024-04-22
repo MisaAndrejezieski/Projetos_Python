@@ -140,6 +140,13 @@ def listar_usuarios():
         print("\nUsuários cadastrados:")
         for i, usuario in enumerate(usuarios):
             print(f"[{i+1}] Nome: {usuario.nome} CPF: {usuario.cpf}")
+            print(f"Data de Nascimento: {usuario.data_nascimento}")
+            print(f"Endereço: {usuario.endereco}")
+            if usuario.contas:
+                print("Detalhes da Conta:")
+                for conta in usuario.contas:
+                    print(f"Conta: {conta.numero_conta} Agencia: {conta.agencia}")
+
     else:
         print("Nenhum usuário cadastrado.")
 
