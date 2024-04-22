@@ -56,7 +56,7 @@ contas = []
 
 def menu_principal():
     print("""
-          ===================== BANKOK =====================
+          ===================== BANK0K =====================
     Seja bem vindo(a).
 
     [1] Cadastrar novo usuário
@@ -71,7 +71,7 @@ def menu_principal():
 
 def menu_conta():
     print("""
-          ===================== BANKOK =====================
+          ===================== BANK0K =====================
     [1] Depositar
     [2] Sacar
     [3] Extrato
@@ -141,7 +141,7 @@ def listar_usuarios():
     if len(usuarios) > 0:
         print("\nUsuários cadastrados:")
         for i, usuario in enumerate(usuarios):
-            print("\n===================== BANKOK =====================")
+            print(f"\n===================== {usuario.nome} =====================")
             print(f"[{i+1}] Nome: {usuario.nome} CPF: {usuario.cpf}")
             print(f"Data de Nascimento: {usuario.data_nascimento}")
             print(f"Endereço: {usuario.endereco}")
@@ -149,14 +149,14 @@ def listar_usuarios():
                 print("Detalhes da Conta:")
                 for conta in usuario.contas:
                     print(f"Conta: {conta.numero_conta} Agencia: {conta.agencia}")
-            print("\n===================== EXTRATO =====================")        
+            print("\n===================== BANK0K =====================")        
 
     else:
         print("Nenhum usuário cadastrado.")
 
 def listar_contas():
     if len(contas) > 0:
-        print("\n===================== BANKOK =====================")
+        print("\n===================== BANK0K =====================")
         print("\nContas cadastradas:")
         for i, conta in enumerate(contas):
             print(f"[{i+1}] Conta: {conta.numero_conta} Agencia: {conta.agencia} Titular: {conta.usuario.nome}")
