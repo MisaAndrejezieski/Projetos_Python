@@ -1,4 +1,4 @@
-import time
+import time 
 from decimal import Decimal
 
 class Usuario:
