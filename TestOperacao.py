@@ -1,14 +1,10 @@
 import time
-from datetime import timedelta, datetime
+from datetime import date, datetime
 
-# data_hora = datetime(2024, 4, 23, 10, 30, 20)
-# print(datetime.today())
-# print(date.today())
-# print(data_hora)
-
-d = datetime.datetime(2024, 4, 23, 13, 45)
-d = d + datetime.timedelta(weeks=1)
-print(d)
+data_hora = datetime(2024, 4, 23, 10, 30, 20)
+print(datetime.today())
+print(date.today(), )
+print(data_hora)
 
 def soma(a, b):
     return a + b
