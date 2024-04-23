@@ -2,7 +2,7 @@ import time
 from datetime import date, datetime
 
 data_hora = datetime(2024, 4, 23)
-print(datetime.today(), f"{time.strftime('%d/%m/%y %X')}")
+print(date.today(), f"{time.strftime('%d/%m/%y %X')}")
 print(date.today())
 print(data_hora)
 
