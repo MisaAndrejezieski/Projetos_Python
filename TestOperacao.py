@@ -1,6 +1,8 @@
+import time
 from datetime import date
 
 date = date(2024, 5, 23)
+time = f"\nDia de hoje {date} {hora}:"
 print(date)
 
 def soma(a, b):
