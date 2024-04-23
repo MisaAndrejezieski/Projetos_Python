@@ -7,10 +7,11 @@ def data_hora():
     print(f"{time.strftime('%d/%m/%y %X')}")
 
 def menu():
+    
+    data_hora()
     menu = """\n
             BANCO DESAFIO PYTHON
     ================ MENU ================
-    data_hora()
     [1]\tDepositar
     [2]\tSacar
     [3]\tExtrato
