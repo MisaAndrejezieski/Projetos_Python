@@ -2,6 +2,7 @@ import time
 from datetime import date, datetime
 
 data_hora = datetime(2024, 4, 23, 10, 30, 20)
+print(date)
 print(data_hora)
 
 def soma(a, b):
