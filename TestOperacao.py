@@ -1,9 +1,11 @@
 import time
 from datetime import date, datetime
+print("=====CALCULADERA=====")
 
 data_hora = datetime(2024, 4, 23)
 print(f"{time.strftime('%d/%m/%y %X')}")
 
+print("=====================")
 
 def soma(a, b):
     return a + b
