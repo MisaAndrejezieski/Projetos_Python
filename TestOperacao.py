@@ -1,9 +1,8 @@
 import time
-from datetime import date
+from datetime import date, datetime
 
-date = date(2024, 5, 23)
-time = f"\nDia de hoje {date} {hora}:"
-print(date)
+data_hora = datetime(2024, 4, 23, 10, 30, 20)
+print(data_hora)
 
 def soma(a, b):
     return a + b
