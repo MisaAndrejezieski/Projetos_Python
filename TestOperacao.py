@@ -3,8 +3,7 @@ from datetime import date, datetime
 
 data_hora = datetime(2024, 4, 23)
 print(f"{time.strftime('%d/%m/%y %X')}")
-print(date.today())
-print(data_hora)
+
 
 def soma(a, b):
     return a + b
