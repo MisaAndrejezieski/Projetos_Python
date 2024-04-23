@@ -1,3 +1,8 @@
+from datetime import date
+
+date = date(2024, 5, 23)
+print(date)
+
 def soma(a, b):
     return a + b
 
