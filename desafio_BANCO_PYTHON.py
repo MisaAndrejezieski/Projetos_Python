@@ -1,8 +1,10 @@
 import textwrap
-
+import time
+from datetime import date, datetime
 
 def menu():
     menu = """\n
+    {time.strftime('%d/%m/%y %X')}
             BANCO DESAFIO PYTHON
     ================ MENU ================
     [1]\tDepositar
