@@ -3,8 +3,7 @@ import time
 from datetime import date, datetime
 
 def menu():
-    menu = print(f"{time.strftime('%d/%m/%y %X')}")
-    """\n
+    menu = """\n
             BANCO DESAFIO PYTHON
     ================ MENU ================
     [1]\tDepositar
