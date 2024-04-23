@@ -2,10 +2,15 @@ import textwrap
 import time
 from datetime import date, datetime
 
+def data_hora():
+    data_hora = datetime(2024, 4, 23)
+    print(f"{time.strftime('%d/%m/%y %X')}")
+
 def menu():
     menu = """\n
             BANCO DESAFIO PYTHON
     ================ MENU ================
+    data_hora()
     [1]\tDepositar
     [2]\tSacar
     [3]\tExtrato
