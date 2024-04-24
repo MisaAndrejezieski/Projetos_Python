@@ -7,14 +7,14 @@ conexao = sqlite3.connect('banco_de_dados.db')
 cursor = conexao.cursor()
 
 # Crie uma nova tabela
-# cursor.execute('''
-#     CREATE TABLE clientes (
-#         id INTEGER PRIMARY KEY,
-#         nome TEXT,
-#         email TEXT,
-#         endereço TEXT
-#     )
-# ''')
+cursor.execute('''
+    CREATE TABLE clientes (
+        id INTEGER PRIMARY KEY,
+        nome TEXT,
+        email TEXT,
+        endereço TEXT
+    )
+''')
 
 # Insira alguns dados na tabela
 # cursor.execute("INSERT INTO clientes (nome, email, endereço) VALUES (?, ?, ?)", ('João', 'joao@email.com', 'Rua dos Joãozinhos'))
