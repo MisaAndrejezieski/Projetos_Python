@@ -5,6 +5,7 @@ from pydantic import BaseModel, NonEmptyStr, PositiveInt
 from tortoise.contrib.fastapi import register_tortoise
 from tortoise.models import Model
 from tortoise import fields
+from pydantic import BaseModel, constr, conint
 
 app = FastAPI()
 
@@ -19,6 +20,12 @@ class User(Model):
 
     class Meta:
         table = "users"
+
+class Competidor(BaseModel):
+    nome: constr(min_length=1)
+    idade: conint(gt=0)
+    peso: float
+    altura: float
 
 class Competidor(Model):
     id = fields.IntField(pk=True)
