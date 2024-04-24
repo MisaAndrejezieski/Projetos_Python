@@ -24,6 +24,10 @@ cursor = conexao.cursor()
 # cursor.execute("INSERT INTO clientes (nome, email, endereço) VALUES (?, ?, ?)", ('Joana', 'joana@email.com', 'Rua das Joaninhas'))
 # cursor.execute("INSERT INTO clientes (nome, email, endereço) VALUES (?, ?, ?)", ('Luana', 'luana@email.com', 'Rua das Cachorras'))
 
+
+novo_endereco = 'Rua das Cadelas'  # Substitua 'Rua Nova' pelo novo endereço
+cursor.execute("UPDATE clientes SET endereço = ? WHERE nome = ?", (novo_endereco, 'Luana'))
+
 #cursor.execute("UPDATE clientes SET endereço = ? WHERE nome = ?", ('Rua das Cadelas', 'Luana'))
 
 cursor.execute("SELECT * FROM clientes WHERE id = 6", ())
