@@ -19,11 +19,8 @@ def criar_cachorro():
 
 c = Cachorro("Chappie", "amarelo")
 c.falar()
-print(c)
+print(c.nome, c.cor,)
 
-print("Ola mundo")
-
-del c
-
+#del c
 
 # criar_cachorro()
