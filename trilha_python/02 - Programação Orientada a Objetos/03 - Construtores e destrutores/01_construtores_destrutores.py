@@ -23,4 +23,4 @@ print(c.nome, c.cor,)
 
 #del c
 
-# criar_cachorro()
+#criar_cachorro()
