@@ -6,7 +6,7 @@ from tortoise.contrib.fastapi import register_tortoise
 from tortoise.models import Model
 from tortoise import fields
 from pydantic import BaseModel, constr, conint
-# muito foda desgraça
+# muito foda, desgraça não funciona.
 app = FastAPI()
 
 pwd_context = CryptContext(schemes=["argon2"], deprecated="auto")
