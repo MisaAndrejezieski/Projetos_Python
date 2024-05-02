@@ -1,12 +1,16 @@
 import tkinter as tk
 
-
 # Função para calcular e mostrar os números pares
 def calcular_numeros():
     try:
         # Obtendo o número limite e o intervalo a partir das entradas do usuário
         limite = int(entry_limite.get())
         intervalo = int(entry_intervalo.get())
+
+        # Verificando se o intervalo é positivo
+        if intervalo <= 0:
+            label_resultado['text'] = "O intervalo deve ser um número positivo."
+            return
 
         # Calculando os números pares dentro do intervalo especificado
         numeros_pares = [n for n in range(0, limite + 1, intervalo) if n % 2 == 0]
