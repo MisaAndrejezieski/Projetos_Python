@@ -1,5 +1,6 @@
 import pygame
 import sys
+import random
 
 # Inicialização do Pygame
 pygame.init()
@@ -20,6 +21,11 @@ pygame.display.set_caption('Minecraft Simples')
 # Relógio para controlar a taxa de atualização da tela
 relogio = pygame.time.Clock()
 
+# Função para gerar um mundo aleatório
+def gerar_mundo():
+    mundo = [[random.choice([0, 1]) for _ in range(largura // tamanho_bloco)] for _ in range(altura // tamanho_bloco)]
+    return mundo
+
 # Função para desenhar o mundo
 def desenhar_mundo(mundo):
     for linha in range(len(mundo)):
@@ -30,7 +36,7 @@ def desenhar_mundo(mundo):
 # Função principal do jogo
 def jogo():
     # Definição do mundo
-    mundo = [[0] * (largura // tamanho_bloco) for _ in range(altura // tamanho_bloco)]
+    mundo = gerar_mundo()
 
     # Posição inicial do personagem
     personagem_x = 0
