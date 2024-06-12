@@ -1,6 +1,5 @@
-import sys
-
 import pygame
+import sys
 
 # Inicialização do Pygame
 pygame.init()
@@ -9,6 +8,7 @@ pygame.init()
 branco = (255, 255, 255)
 preto = (0, 0, 0)
 verde = (0, 255, 0)
+azul = (0, 0, 255)
 
 # Configurações da tela
 largura = 800
@@ -60,10 +60,21 @@ def jogo():
                 else:
                     mundo[linha][coluna] = 0
 
+        # Movimento do personagem com as teclas de seta
+        teclas = pygame.key.get_pressed()
+        if teclas[pygame.K_UP] and personagem_y > 0:
+            personagem_y -= tamanho_bloco
+        elif teclas[pygame.K_DOWN] and personagem_y < altura - tamanho_bloco:
+            personagem_y += tamanho_bloco
+        elif teclas[pygame.K_LEFT] and personagem_x > 0:
+            personagem_x -= tamanho_bloco
+        elif teclas[pygame.K_RIGHT] and personagem_x < largura - tamanho_bloco:
+            personagem_x += tamanho_bloco
+
         # Desenha o mundo na tela
         tela.fill(preto)
         desenhar_mundo(mundo)
-        pygame.draw.rect(tela, (255, 0, 0), (personagem_x, personagem_y, tamanho_bloco, tamanho_bloco))  # Personagem
+        pygame.draw.rect(tela, azul, (personagem_x, personagem_y, tamanho_bloco, tamanho_bloco))  # Personagem
         pygame.display.update()
 
         # Controla a taxa de atualização da tela
