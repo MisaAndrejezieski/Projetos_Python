@@ -63,13 +63,13 @@ def jogo():
         # Movimento do personagem com as teclas de seta
         teclas = pygame.key.get_pressed()
         if teclas[pygame.K_UP] and personagem_y > 0:
-            personagem_y -= tamanho_bloco
+            personagem_y -= 5
         elif teclas[pygame.K_DOWN] and personagem_y < altura - tamanho_bloco:
-            personagem_y += tamanho_bloco
+            personagem_y += 5
         elif teclas[pygame.K_LEFT] and personagem_x > 0:
-            personagem_x -= tamanho_bloco
+            personagem_x -= 5
         elif teclas[pygame.K_RIGHT] and personagem_x < largura - tamanho_bloco:
-            personagem_x += tamanho_bloco
+            personagem_x += 5
 
         # Desenha o mundo na tela
         tela.fill(preto)
