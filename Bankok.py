@@ -180,7 +180,7 @@ def main():
         elif opcao == "5":
             listar_contas()
         elif opcao == "0":
-            print("Obrigado por usar nossos Serviços!")
+            print("Obrigado por usar os Serviços do Misa_Misa Banc!")
             break
         else:
             print("Operação inválida, por favor selecione uma opção disponível.")
