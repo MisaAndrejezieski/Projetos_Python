@@ -1,6 +1,5 @@
-import random
-
 import pygame
+import random
 
 # Inicialização do Pygame
 pygame.init()
@@ -50,7 +49,7 @@ def desenhar_bola():
 
 # Função principal do jogo
 def jogo():
-    global bola_x, bola_y, bola_dx, bola_dy
+    global barra1_y, barra2_y, bola_x, bola_y, bola_dx, bola_dy
 
     while True:
         for evento in pygame.event.get():
@@ -102,7 +101,7 @@ def jogo():
         pygame.display.update()
 
         # Controla a taxa de atualização da tela
-        relogio.tick(20)
+        relogio.tick(60)
 
 # Inicia o jogo
 jogo()
