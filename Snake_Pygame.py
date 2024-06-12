@@ -26,13 +26,6 @@ def desenhar_cobrinha(cobrinha):
     for posicao in cobrinha:
         pygame.draw.rect(tela, verde, [posicao[0], posicao[1], 10, 10])
 
-# Função para desenhar a borda na tela
-def desenhar_borda():
-    pygame.draw.rect(tela, branco, [0, 0, largura, 10])  # Topo
-    pygame.draw.rect(tela, branco, [0, 0, 10, altura])   # Esquerda
-    pygame.draw.rect(tela, branco, [largura-10, 0, 10, altura])  # Direita
-    pygame.draw.rect(tela, branco, [0, altura-10, largura, 10])   # Baixo
-
 # Função principal do jogo
 def jogo():
     cobrinha = [[largura / 2, altura / 2]]
@@ -68,10 +61,15 @@ def jogo():
         elif direcao == 'baixo':
             cobrinha[0][1] += 10
 
-        # Verifica se a cabeça da cobrinha colidiu com a borda ou com o próprio corpo
-        if cobrinha[0][0] <= 10 or cobrinha[0][0] >= largura - 20 or cobrinha[0][1] <= 10 or cobrinha[0][1] >= altura - 20:
-            pygame.quit()
-            quit()
+        # Verifica se a cabeça da cobrinha colidiu com a borda da tela
+        if cobrinha[0][0] <= 10:
+            cobrinha[0][0] = largura - 20
+        elif cobrinha[0][0] >= largura - 10:
+            cobrinha[0][0] = 10
+        elif cobrinha[0][1] <= 10:
+            cobrinha[0][1] = altura - 20
+        elif cobrinha[0][1] >= altura - 10:
+            cobrinha[0][1] = 10
 
         # Verifica se a cabeça da cobrinha colidiu com a comida
         if cobrinha[0][0] == comida_x and cobrinha[0][1] == comida_y:
@@ -79,10 +77,10 @@ def jogo():
             pontuacao += 10
             comida_x = round(random.randrange(20, largura - 30) / 10.0) * 10
             comida_y = round(random.randrange(20, altura - 30) / 10.0) * 10
+            cobrinha.append([0, 0])  # Adiciona um novo segmento à cobrinha
 
         # Atualiza a tela
         tela.fill(branco)
-        desenhar_borda()
         pygame.draw.rect(tela, vermelho, [comida_x, comida_y, 10, 10])
         desenhar_cobrinha(cobrinha)
         placar_texto = fonte.render("Pontuação: " + str(pontuacao), True, verde)
@@ -90,7 +88,7 @@ def jogo():
         pygame.display.update()
 
         # Controla a taxa de atualização da tela
-        relogio.tick(15)
+        relogio.tick(5)
 
 # Inicia o jogo
 jogo()
