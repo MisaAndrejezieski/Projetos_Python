@@ -80,20 +80,18 @@ def jogo():
                 pygame.quit()
                 sys.exit()
 
-            # Movimento do personagem
-            if evento.type == pygame.KEYDOWN:
-                if evento.key == pygame.K_UP:
-                    if personagem_y > 0 and labirinto[personagem_y // tamanho_celula - 1][personagem_x // tamanho_celula] == 0:
-                        personagem_y -= tamanho_celula
-                elif evento.key == pygame.K_DOWN:
-                    if personagem_y < altura - tamanho_celula and labirinto[personagem_y // tamanho_celula + 1][personagem_x // tamanho_celula] == 0:
-                        personagem_y += tamanho_celula
-                elif evento.key == pygame.K_LEFT:
-                    if personagem_x > 0 and labirinto[personagem_y // tamanho_celula][personagem_x // tamanho_celula - 1] == 0:
-                        personagem_x -= tamanho_celula
-                elif evento.key == pygame.K_RIGHT:
-                    if personagem_x < largura - tamanho_celula and labirinto[personagem_y // tamanho_celula][personagem_x // tamanho_celula + 1] == 0:
-                        personagem_x += tamanho_celula
+        # Captura das teclas pressionadas
+        teclas = pygame.key.get_pressed()
+        
+        # Movimento do personagem
+        if teclas[pygame.K_w] and personagem_y > 0 and labirinto[(personagem_y - 1) // tamanho_celula][(personagem_x // tamanho_celula)] == 0:
+            personagem_y -= tamanho_celula
+        elif teclas[pygame.K_s] and personagem_y < altura - tamanho_celula and labirinto[(personagem_y + tamanho_celula) // tamanho_celula][(personagem_x // tamanho_celula)] == 0:
+            personagem_y += tamanho_celula
+        elif teclas[pygame.K_a] and personagem_x > 0 and labirinto[(personagem_y // tamanho_celula)][(personagem_x - 1) // tamanho_celula] == 0:
+            personagem_x -= tamanho_celula
+        elif teclas[pygame.K_d] and personagem_x < largura - tamanho_celula and labirinto[(personagem_y // tamanho_celula)][(personagem_x + tamanho_celula) // tamanho_celula] == 0:
+            personagem_x += tamanho_celula
 
         # Desenha o labirinto e o personagem na tela
         tela.fill(preto)
