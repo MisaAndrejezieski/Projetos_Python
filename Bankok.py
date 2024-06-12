@@ -58,7 +58,7 @@ contas = []
 
 def menu_principal():
     print("""
-          ===================== BANK0K =====================
+          ===================== Misa_Misa Banc =====================
                             MENU PRINCIPAL
 
     [1] Cadastrar novo usuário
