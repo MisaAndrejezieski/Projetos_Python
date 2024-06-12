@@ -102,7 +102,7 @@ def jogo():
         pygame.display.update()
 
         # Controla a taxa de atualização da tela
-        relogio.tick(60)
+        relogio.tick(20)
 
 # Inicia o jogo
 jogo()
