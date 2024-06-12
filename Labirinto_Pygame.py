@@ -1,7 +1,6 @@
-import random
-import sys
-
 import pygame
+import sys
+import random
 
 # Inicialização do Pygame
 pygame.init()
@@ -71,15 +70,35 @@ def desenhar_labirinto(labirinto):
 def jogo():
     labirinto = gerar_labirinto()
 
+    # Posição inicial do personagem
+    personagem_x = tamanho_celula
+    personagem_y = tamanho_celula
+
     while True:
         for evento in pygame.event.get():
             if evento.type == pygame.QUIT:
                 pygame.quit()
                 sys.exit()
 
-        # Desenha o labirinto na tela
+            # Movimento do personagem
+            if evento.type == pygame.KEYDOWN:
+                if evento.key == pygame.K_UP:
+                    if personagem_y > 0 and labirinto[personagem_y // tamanho_celula - 1][personagem_x // tamanho_celula] == 0:
+                        personagem_y -= tamanho_celula
+                elif evento.key == pygame.K_DOWN:
+                    if personagem_y < altura - tamanho_celula and labirinto[personagem_y // tamanho_celula + 1][personagem_x // tamanho_celula] == 0:
+                        personagem_y += tamanho_celula
+                elif evento.key == pygame.K_LEFT:
+                    if personagem_x > 0 and labirinto[personagem_y // tamanho_celula][personagem_x // tamanho_celula - 1] == 0:
+                        personagem_x -= tamanho_celula
+                elif evento.key == pygame.K_RIGHT:
+                    if personagem_x < largura - tamanho_celula and labirinto[personagem_y // tamanho_celula][personagem_x // tamanho_celula + 1] == 0:
+                        personagem_x += tamanho_celula
+
+        # Desenha o labirinto e o personagem na tela
         tela.fill(preto)
         desenhar_labirinto(labirinto)
+        pygame.draw.rect(tela, verde, (personagem_x, personagem_y, tamanho_celula, tamanho_celula))
         pygame.display.flip()
 
         # Controla a taxa de atualização da tela
